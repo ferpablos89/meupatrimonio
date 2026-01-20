@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class CategoriaGasto extends Model
 {
-    //
+    protected $fillable = [
+        'id_categoria_gasto',
+        'nome',
+    ];
 }

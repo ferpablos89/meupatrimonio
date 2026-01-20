@@ -1,15 +1,33 @@
 services:
-  backend:
+  meupatrimonio-backend:
     build: ./backend
+    container_name: meupatrimonio-backend
+    ports:
+      - "80:80"
     volumes:
       - ./backend:/var/www
-  frontend:
+    networks:
+      - meupatrimonio
+  meupatrimonio-frontend:
     build: ./frontend
+    container_name: meupatrimonio-frontend
     ports:
       - "5173:5173"
-  db:
+    networks:
+      - meupatrimonio
+  meupatrimonio-db:
     image: postgres:16
+    container_name: meupatrimonio-db
+    ports:
+      - "5432:5432"
+    env_file:
+    - ./backend/.env
     environment:
-      POSTGRES_DB: finance
-      POSTGRES_USER: finance
-      POSTGRES_PASSWORD: finance
+      POSTGRES_DB: meupatrimonio
+      POSTGRES_USER: meupatrimonio
+      POSTGRES_PASSWORD: meupatrimonio
+    networks:
+      - meupatrimonio
+networks:
+  meupatrimonio:
+    name: meupatrimonio

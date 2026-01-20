@@ -19,8 +19,8 @@ class GastoFactory extends Factory
         return [
             'id_categoria_gasto' => $this->faker->randomElement([1,2,3,4]),
             'valor' => $this->faker->randomFloat(2,0,800),
-            'data' => $this->faker->dateBetween('2025-01-01', '2026-12-31'),
-            'descricao' => $this->faker->text(50),
+            'data' => $this->faker->date(),
+            'descricao' => $this->faker->text(150),
         ];
     }
 }

@@ -38,5 +38,7 @@ class DatabaseSeeder extends Seeder
         CategoriaGasto::factory()->create([
             'nome' => 'Lazer'
         ]);
+
+        Gasto::factory(50)->create();
     }
 }

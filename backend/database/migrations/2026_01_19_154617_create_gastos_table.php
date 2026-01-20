@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('gasto', function (Blueprint $table) {
+        Schema::create('gastos', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_categoria_gasto');
             $table->decimal('valor');
@@ -20,7 +20,7 @@ return new class extends Migration
             $table->timestamps();
             $table->foreign('id_categoria_gasto')
                 ->references('id')
-                ->on('categoria_gasto')
+                ->on('categoria_gastos')
                 ->onDelete('cascade');
         });
     }

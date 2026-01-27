@@ -14,8 +14,11 @@ class CategoriaGastoController extends Controller
      */
     public function index()
     {
-        return CategoriaGastoResource::collection(CategoriaGasto::all());
+        return CategoriaGastoResource::collection(
+            CategoriaGasto::with('gastos')->withSum('gastos', 'valor')->get()
+        );
     }
+
 
     /**
      * Store a newly created resource in storage.

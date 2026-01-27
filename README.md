@@ -91,16 +91,25 @@ docker exec -it meupatrimonio-backend php artisan migrate
 ## 📁 Estrutura do Projeto
 
 meupatrimonio/
+
  ├─ backend/
+
  ├─ frontend/
+
  ├─ docker-compose.yml
+
  └─ README.md
 
 ## 🔌 Endpoints Principais
+
 Método	Endpoint	Descrição
+
 GET	/api/categoriagasto	Lista categorias
+
 GET	/api/gasto	Lista gastos
+
 POST	/api/gasto	Cadastra gasto
+
 POST	/api/categoriagasto	Cadastra categoria
 
 ## 🤝 Contribuindo

@@ -54,3 +54,72 @@ Clone o repositório:
 ```bash
 git clone https://github.com/ferpablos89/meupatrimonio.git
 cd meupatrimonio
+```
+
+Suba os containers:
+
+```bash
+docker compose up -d --build
+```
+
+Acesse:
+
+Frontend: http://localhost:5173
+
+Backend (API): http://localhost:8080
+
+## ⚙️ Configuração do Backend
+
+Copie o arquivo de ambiente:
+
+```bash
+cp backend/.env.example backend/.env
+```
+
+Gere a chave da aplicação:
+
+```bash
+docker exec -it meupatrimonio-backend php artisan key:generate
+```
+
+Execute as migrations:
+
+```bash
+docker exec -it meupatrimonio-backend php artisan migrate
+```
+
+## 📁 Estrutura do Projeto
+
+meupatrimonio/
+ ├─ backend/
+ ├─ frontend/
+ ├─ docker-compose.yml
+ └─ README.md
+
+## 🔌 Endpoints Principais
+Método	Endpoint	Descrição
+GET	/api/categoriagasto	Lista categorias
+GET	/api/gasto	Lista gastos
+POST	/api/gasto	Cadastra gasto
+POST	/api/categoriagasto	Cadastra categoria
+
+## 🤝 Contribuindo
+
+Faça um fork
+
+Crie uma branch (git checkout -b feature/minha-feature)
+
+Commit suas alterações
+
+Push para sua branch
+
+Abra um Pull Request
+
+
+## 👤 Autores
+
+Fernando Pablos, Mitzy Ohira e André Massahiro Shimaoka
+
+## ⭐ Apoie o Projeto
+
+Se este projeto te ajudou, considere deixar uma estrela ⭐ no repositório!

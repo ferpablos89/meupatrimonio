@@ -1,26 +1,49 @@
+# ======================
+# BACKEND
+# ======================
 /backend/node_modules
-/backend/*.log
-/backend/.DS_Store
-/backend/.env
-/backend/.env.backup
-/backend/.env.production
-/backend/.phpactor.json
-/backend/.phpunit.result.cache
-/backend/.fleet
-/backend/.idea
-/backend/.nova
-/backend/.phpunit.cache
-/backend/.vscode
-/backend/.zed
-/backend/auth.json
-/backend/node_modules
+/backend/vendor
 /backend/public/build
 /backend/public/hot
 /backend/public/storage
-/backend/storage/*.key
-/backend/storage/pail
-/backend/vendor
+
+/backend/.env
+/backend/.env.*
+!/backend/.env.example
+
+/backend/*.log
+/backend/.DS_Store
+/backend/Thumbs.db
+
+/backend/.phpunit.result.cache
+/backend/.phpunit.cache
+
+/backend/.phpactor.json
+/backend/auth.json
+
+/backend/.fleet
+/backend/.idea
+/backend/.nova
+/backend/.vscode
+/backend/.zed
+
 /backend/Homestead.json
 /backend/Homestead.yaml
-/backend/Thumbs.db
+
+/backend/storage/*.key
+/backend/storage/pail
+
+# ======================
+# FRONTEND
+# ======================
 /frontend/node_modules
+/frontend/dist
+
+# ======================
+# GERAL
+# ======================
+node_modules
+npm-debug.log*
+yarn-error.log*
+.DS_Store
+.env

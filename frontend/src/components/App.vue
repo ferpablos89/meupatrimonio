@@ -39,7 +39,6 @@
 import logo from "@/assets/logo_mp.png"
 import axios from 'axios'
 import { onMounted, ref } from 'vue'
-import router from 'vue-router'
 
 const categorias_com_gastos = ref([])
 
